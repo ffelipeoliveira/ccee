@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --screen-center: {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  };
+}
+
+html, body {
+  width: 100vw;
+  color: --color-text;
+  color: --color-background;
+}
+
+@theme {
+  --color-text: #d9ecff;
+  --color-background: #101010;
+}
+
+@layer utilities {
+    .flex-center {
+      @apply flex justify-center items-center;
+    }
+
+    .screen-center {
+      @apply --screen-center;
+    }
+}
