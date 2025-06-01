@@ -107,7 +107,7 @@ Se você tiver alguma sugestão de ferautre, por favor crie um fork do repositó
 
 1. Crie um fork do projeto
 2. Crie uma branch pra sua feature (`git checkout -b feature/Melhoria`)
-3. Faça um commit (`git commit -m 'Adiciona tal melhoria'`)
+3. Faça um commit (`git commit -m '(feat) adiciona tal melhoria'`) ou (`git commit -m '(bug) corrige tal bug'`)
 4. Faça um push pro repositório remoto (`git push origin feature/Melhoria`)
 5. Abra um pull request.
 
