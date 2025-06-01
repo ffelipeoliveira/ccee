@@ -1,5 +1,5 @@
 <!-- See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-
+<a id="readme-top"></a>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -14,10 +14,11 @@
     <br />
   </p>
 
-  [![Contributors][contributors-shield]](https://github.com/ffelipeoliveira/ccee/graphs/contributors)
-  [![Issues][issues-shield]](https://github.com/ffelipeoliveira/ccee/issues)
-  [![project_license][license-shield]](https://github.com/ffelipeoliveira/ccee/blob/main/LICENSE.txt)
-  [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/francisco-felipe-vieira-oliveira-b24152236/)
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Forks][forks-shield]][forks-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Issues][issues-shield]][issues-url]
+  [![Unlicense License][license-shield]][license-url]
 </div>
 
 
@@ -48,11 +49,9 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Captura de tela][product-screenshot]](https://github.com/user-attachments/assets/b513ebc8-1298-415d-9c8b-e2cd78f056e4)
 
-Projeto feito para 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Projeto feito para a disciplina de Métodos Avançados de Programação 
 
 
 
@@ -60,19 +59,17 @@ Projeto feito para
 
 ![React][React.js] ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
-## Começando
+## Como usar
 
 ### Instalação
 
 1. Registre seu projeto no [Firebase](https://firebase.google.com/?hl=pt-br)
 2. Clone o repositório
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/ffelipeoliveira/ccee.git
    ```
 3. Instale os pacotes NPM
    ```sh
@@ -87,9 +84,8 @@ Projeto feito para
    npm run dev
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -98,44 +94,41 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Base
+- [ ] Login e Cadastro
+- [ ] Enviar mensagens para todos
+- [ ] Chat integrado
+    - [ ] Delegação de permissões
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Como contribuir
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Se você tiver alguma sugestão de ferautre, por favor crie um fork do repositório e crie um pull request. Não esqueça de dar uma estrelinha pro projeto! Obrigado!
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+1. Crie um fork do projeto
+2. Crie uma branch pra sua feature (`git checkout -b feature/Melhoria`)
+3. Faça um commit (`git commit -m 'Adiciona tal melhoria'`)
+4. Faça um push pro repositório remoto (`git push origin feature/Melhoria`)
+5. Abra um pull request.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+### Maiores contribuidores:
 
-### Top contributors:
-
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+<a href="https://github.com/ffelipeoliveira/ccee/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ffelipeoliveira/ccee" alt="contrib.rocks image" />
 </a>
 
 
@@ -143,62 +136,40 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the project_license. See `LICENSE.txt` for more information.
+Distribuído sob a licensa GPL2. Acesse `LICENSE.txt` para mais informações.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 
 
 <!-- CONTACT -->
-## Contact
+## Contato
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+[![LinkedIn][linkedin-shield]][linkedin-url] Francisco Felipe V. Oliveira   
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Link do projeto: [https://github.com/ffelipeoliveira/ccee](https://github.com/ffelipeoliveira/ccee)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/ffelipeoliveira/ccee.svg?style=for-the-badge
+[contributors-url]: https://github.com/ffelipeoliveira/ccee/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ffelipeoliveira/ccee.svg?style=for-the-badge
+[forks-url]: https://github.com/ffelipeoliveira/ccee/network/members
+[stars-shield]: https://img.shields.io/github/stars/ffelipeoliveira/ccee.svg?style=for-the-badge
+[stars-url]: https://github.com/ffelipeoliveira/ccee/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ffelipeoliveira/ccee.svg?style=for-the-badge
+[issues-url]: https://github.com/ffelipeoliveira/ccee/issues
+[license-shield]: https://img.shields.io/github/license/ffelipeoliveira/ccee.svg?style=for-the-badge
+[license-url]: https://github.com/ffelipeoliveira/ccee/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
+[linkedin-url]: https://linkedin.com/in/francisco-felipe-vieira-oliveira-b24152236/
+[product-screenshot]: https://github.com/user-attachments/assets/b513ebc8-1298-415d-9c8b-e2cd78f056e4
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
