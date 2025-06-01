@@ -122,9 +122,9 @@ Se você tiver alguma sugestão de ferautre, por favor crie um fork do repositó
 
 
 <!-- LICENSE -->
-## License
+## Licença
 
-Distribuído sob a licensa GPL2. Acesse `LICENSE.txt` para mais informações.
+Distribuído sob a licença GPL2. Acesse `LICENSE.txt` para mais informações.
 
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
 
