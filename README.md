@@ -76,23 +76,11 @@ Projeto feito para a disciplina de Métodos Avançados de Programação
    npm install
    ```
 4. Crie seu .env e configure o Firebase
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
 5. Rode o frontend
    ```sh
    npm run dev
    ```
-
-
-<p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <p align="right">(<a href="#readme-top">voltar para o topo</a>)</p>
