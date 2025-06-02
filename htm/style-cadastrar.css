@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000000, #2e2e2e 90%);
+  color: white;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
+}
+
+.circle1 {
+  background: linear-gradient(to top, #0f0f0f, #272727 60%);
+  width: 550px;
+  height: 550px;
+  top: 15%;
+  left: 24%;
+}
+
+.circle2 {
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  right: 30%;
+  background: linear-gradient(to bottom, #0f0f0f, #2e2e2e 90%);
+}
+
+.circle3 {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  right: 33%;
+  background: linear-gradient(to bottom, #0f0f0f, #2e2e2e 130%);
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo h1 img {
+  width: 80px; /* Ajuste conforme sua logo */
+}
+
+.logo p {
+  font-size: 10px;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+form {
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 250px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.password-container {
+  position: relative;
+}
+
+
+.checkbox-container {
+  margin: 10px 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-container input {
+  margin-right: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4b4b4b, #666666);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2e78f0, #0f6ee2);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.back-button:hover, .login-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
