@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 import WebRoutes from './routes';
 
 import './index.css'
+import './tailwind_import.css'
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
