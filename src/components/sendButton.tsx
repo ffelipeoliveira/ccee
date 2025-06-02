@@ -1,11 +1,20 @@
 import { RiArrowRightSLine } from "react-icons/ri";
 
-function sendButton() {
-  return (
-	<button className="sendButton">
-		<RiArrowRightSLine />
-	</button>
-  )
+interface SendButtonProps {
+  onClick?: () => void;
+  disabled?: boolean;
 }
 
-export default sendButton;
+function SendButton({ onClick, disabled = false }: SendButtonProps) {
+  return (
+    <button 
+      className="sendButton" 
+      onClick={onClick}
+      disabled={disabled}
+    >
+      <RiArrowRightSLine/>
+    </button>
+  );
+}
+
+export default SendButton;
