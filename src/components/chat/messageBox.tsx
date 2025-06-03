@@ -13,7 +13,7 @@ function MessageBox() {
       alert('Please enter both email and message');
       return;
     }
-
+    
   };
 
   return (
