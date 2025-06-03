@@ -1,8 +1,8 @@
-// server.js
+
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import { sendMail } from './gmail.js'; // ajuste o caminho conforme necessário
+import { sendMail } from './gmail.js';
 
 const app = express();
 const PORT = 3001;

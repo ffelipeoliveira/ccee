@@ -24,7 +24,7 @@ oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
 async function sendMail() {
   try {
-    const filePath = path.resolve(__dirname, 'email_message.txt'); // caminho do arquivo salvo
+    const filePath = path.resolve(__dirname, 'email_message.txt');
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { email, message } = JSON.parse(fileContent);
 
@@ -44,7 +44,7 @@ async function sendMail() {
 
     const mailOptions = {
       from: 'RENAN 📧 <renan.martins@aluno.uepb.edu.br>',
-      to: email.split(','), // permite múltiplos emails separados por vírgula
+      to: email.split(','),
       subject: 'Mensagem personalizada',
       text: message,
       html: `<p>${message}</p>`,
