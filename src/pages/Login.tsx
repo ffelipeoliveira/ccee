@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Background from '../components/background'
 import SendButton from '../components/sendButton';
-
+import CheckBox from '../components/forms/checkbox';
 import '../stylesheets/login/login.css';
 
 function Login() {
@@ -63,6 +63,7 @@ function Login() {
                             onChange={(e) => setPassword(e.target.value)} 
                         />
                     </div>
+                    <CheckBox required id='123123' label='Concordo com os termos.'/>
                     <div className='not-signed align-right '>
                         <a href="/recuperacao">Esqueceu a senha?</a>
                     </div>
@@ -75,6 +76,7 @@ function Login() {
                         disabled={authing}>
                     </button>
                     <SendButton/>
+                    
 
                 </form>
             </div>
