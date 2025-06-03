@@ -1,15 +1,8 @@
-import express from 'express';
-import cors from 'cors';
 import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
 import { google } from 'googleapis';
 
 dotenv.config();
-const app = express();
-const PORT = 5000;
-
-app.use(cors());
-app.use(express.json()); // para aceitar JSON no corpo da requisição
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
@@ -21,11 +14,10 @@ const oAuth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URI
 );
+
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-app.post('/send-email', async (req, res) => {
-  const { subject, text, html } = req.body;
-
+async function sendMail() {
   try {
     const accessToken = await oAuth2Client.getAccessToken();
 
@@ -44,17 +36,18 @@ app.post('/send-email', async (req, res) => {
     const mailOptions = {
       from: 'RENAN 📧 <renan.martins@aluno.uepb.edu.br>',
       to: ['renan.lima@academico.ifpb.edu.br'],
-      subject,
-      text,
-      html
+      subject: 'Hello from Gmail using API',
+      text: 'Hello from Gmail using API',
+      html: '<h1>Hello from Gmail using API</h1>',
     };
 
     const result = await transport.sendMail(mailOptions);
-    res.status(200).json({ message: 'Email enviado com sucesso', result });
+    return result;
   } catch (error) {
-    console.error('Erro ao enviar email:', error);
-    res.status(500).json({ message: 'Erro ao enviar email', error });
+    return error;
   }
-});
+}
 
-app.listen(PORT, () => console.log(`Servidor rodando em http://localhost:${PORT}`));
+sendMail()
+  .then((result) => console.log('✅ Email enviado:', result))
+  .catch((error) => console.error('❌ Erro ao enviar:', error));
