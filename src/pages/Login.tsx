@@ -7,7 +7,7 @@ import SendButton from '../components/sendButton';
 import FormBox from '../components/form/formBox';
 import PasswordBox from '../components/form/passwordBox';
 
-import '../stylesheets/login/login.css';
+import '../stylesheets/forms/forms.css';
 
 function Login() {
     const auth = getAuth();
@@ -25,7 +25,7 @@ function Login() {
         signInWithEmailAndPassword(auth, email, password)
             .then(response => {
                 console.log(response.user.uid);
-                navigate('/');
+                navigate('/chat');
             })
             .catch(error => {
                 console.log(error);
@@ -39,11 +39,12 @@ function Login() {
     return (
         <div id='login'>
             <Background/>
-            <div className="form login-form screen-center text-center">
+            <div className="screen-center text-center">
                 <div className="logo">
                     <img src="/logo.svg" alt="CCEE"/>
                     <div className="subtitle">CENTRAL DE COMUNICAÇÃO ESTUDANTIL POR E-MAIL</div>
                 </div>
+                <div className="subtitle">LOGIN</div>
                 <form>
                     <FormBox 
                         value={email} 
@@ -53,9 +54,10 @@ function Login() {
                     />
                     <PasswordBox
                         value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         required={true}
                         placeholder='Senha'
-                        onChange={(e) => setPassword(e.target.value)}
+                        autocomplete='on'
                     />
                     {error && <div className='error'>{error}</div>}
                     <div className='not-signed align-right '>
@@ -64,7 +66,10 @@ function Login() {
                     <div className='subtext align-right'>
                         <a href="/cadastro">Não é cadastrado?</a>
                     </div>
-                    <SendButton onClick={signInWithEmail} disabled={authing}/>
+                    <SendButton 
+                        onClick={signInWithEmail}
+                        disabled={authing}
+                    />
                 </form>
             </div>
         </div>

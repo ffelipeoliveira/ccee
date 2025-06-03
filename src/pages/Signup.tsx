@@ -4,22 +4,37 @@ import { useNavigate } from 'react-router-dom';
 
 import Background from '../components/background'
 import SendButton from '../components/sendButton';
+import BackButton from '../components/backButton';
+import FormBox from '../components/form/formBox';
+import PasswordBox from '../components/form/passwordBox';
+import CheckBox from '../components/form/checkBox';
+
+import '../stylesheets/forms/forms.css';
 
 function Signup() {
-  const auth = getAuth();
-  const navigate = useNavigate();
+	const auth = getAuth();
+	const navigate = useNavigate();
 
 	const [authing, setAuthing] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
+	const [id, setID] = useState('');
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const [confirmPassword, setConfirmPassword] = useState('');
+	const [error, setError] = useState('');
 
-  const signUpWithEmail = async () => {
-    if (password !== confirmPassword) {
-        setError('Passwords do not match');
-        return;
-    }
+	const signUpWithEmail = async () => {
+		if (!email.endsWith('uepb.edu.br')) {
+            setError('Apenas emails institucionais (.uepb.edu.br) são permitidos');
+            return;
+        }
+		if (!/^\d{9}$/.test(id)) {
+            setError('Matrícula inválida');
+            return;
+        }
+		if (password !== confirmPassword) {
+			setError('Senhas não são iguais');
+			return;
+		}
 
     setAuthing(true);
     setError('');
@@ -27,10 +42,11 @@ function Signup() {
     createUserWithEmailAndPassword(auth, email, password)
         .then(response => {
             console.log(response.user.uid);
-            navigate('/');
+            navigate('/chat');
         })
         .catch(error => {
             console.log(error);
+			if (error.message == "Firebase: Error (auth/email-already-in-use).") error.message = "Cadastro já existente";
             setError(error.message);
             setAuthing(false);
     });
@@ -38,47 +54,54 @@ function Signup() {
   return (
     <>
       <Background/>
-      <div className="form signup-form">
+      <div className=" screen-center text-center">
                 <div className="logo">
                     <img src="/logo.svg" alt="CCEE"/>
                     <div className="subtitle">CENTRAL DE COMUNICAÇÃO ESTUDANTIL POR E-MAIL</div>
                 </div>
 				<div className="subtitle">CADASTRO</div>
 				<form>
-					{/*E-mail*/}
-					<div className="input">
-						<input type="text"
-							className="input-field"
-							value={email}
-							required={true}
-							onChange={(e) => setEmail(e.target.value)}
-						/>
-						<label className="input-label">Email</label>
-					</div>
-					<div className='input'>
-						<input type="password"
-							className="input-field"
-							value={password}
-							required={true}
-							onChange={(e) => setPassword(e.target.value)} 
-						/>
-						<label className="input-label">Senha</label>
-					</div>
-					<div className='input'>
-						<input type="password"
-							className='input-field'
-							value={confirmPassword}
-							required={true}
-							onChange={(e) => setConfirmPassword(e.target.value)} 
-						/>
-						<label className="input-label">Confirmar Senha</label>
-					</div>
-					{error && <div className='text-red-500 mb-4'>{error}</div>}
-					<div className='buttons'>
-					<SendButton 
-						onClick={signUpWithEmail}
-						disabled={authing}
+					<FormBox
+						value={id}
+						onChange={(e) => setID(e.target.value)}
+						required={true}
+						placeholder='Matrícula'
 					/>
+					<FormBox
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						required={true}
+						placeholder='Email'
+					/>
+					<PasswordBox
+							value={password}
+							onChange={(e) => setPassword(e.target.value)} 
+							required={true}
+							placeholder='Senha'
+							autocomplete='off'
+					/>
+					<PasswordBox
+							value={confirmPassword}
+							onChange={(e) => setConfirmPassword(e.target.value)} 
+							required={true}
+							placeholder='Senha'
+					/>
+					<CheckBox 
+						id='terms' 
+						label={
+							<span>
+							Concordo com os <a id='terms-link' href="/terms.txt" onClick={(e) => { e.preventDefault(); }}>Termos de Serviço</a>
+							</span>
+						} 
+						required
+					/>
+					{error && <div className='error'>{error}</div>}
+					<div className="flex-auto">
+						<BackButton link='login'/>
+						<SendButton 
+							onClick={signUpWithEmail}
+							disabled={authing}
+						/>
 					</div>
 				</form>
 			</div>

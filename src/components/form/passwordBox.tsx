@@ -6,13 +6,15 @@ interface PasswordBoxProps {
   value: string;
   required?: boolean;
   placeholder?: string;
+  autocomplete?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function PasswordBox({ 
   value, 
   required = false, 
-  placeholder = 'Password', 
+  placeholder = 'Senha',
+  autocomplete = 'off',
   onChange 
 }: PasswordBoxProps) {
   const [showPassword, setShowPassword] = useState(false);
@@ -28,6 +30,7 @@ function PasswordBox({
         value={value}
         required={required}
         placeholder={placeholder}
+        autoComplete={autocomplete}
         onChange={onChange}
       />
       <button 

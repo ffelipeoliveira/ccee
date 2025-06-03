@@ -1,11 +1,12 @@
 import AttachFiles from "./messageBox/attachFiles"
-import SendMessageButton from "./messageBox/sendMessageButton"
+import SendButton from "../sendButton"
 
 function messageBox() {
   return (
 	<div className="messageBox">
 		<AttachFiles/>
-		<SendMessageButton/>
+		<input type="text" placeholder="Escreva aqui"></input>
+		<SendButton className="sendMessageButton"/>
 	</div>
   )
 }

@@ -3,12 +3,13 @@ import { RiArrowRightSLine } from "react-icons/ri";
 interface SendButtonProps {
   onClick?: () => void;
   disabled?: boolean;
+  className?: string;
 }
 
-function SendButton({ onClick, disabled = false }: SendButtonProps) {
+function SendButton({ onClick, disabled = false, className = "" }: SendButtonProps) {
   return (
     <button 
-      className="sendButton" 
+      className= {"sendButton " + className} 
       onClick={onClick}
       disabled={disabled}
     >

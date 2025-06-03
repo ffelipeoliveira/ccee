@@ -1,0 +1,55 @@
+.background {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: linear-gradient(to bottom, #000000, #2e2e2e 90%);
+
+    .circle {
+		position: absolute;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.05);
+    }
+
+    .circle1 {
+		background: linear-gradient(to top, #0f0f0f, #272727 60%);
+		width: 550px;
+		height: 550px;
+		top: 15%;
+		left: 24%;
+		transition: 1s ease-in-out;
+		&:hover {
+			transition: 1s ease-in-out;
+			top: 17%;
+			left: 25%;
+		}
+    }
+
+    .circle2 {
+		width: 200px;
+		height: 200px;
+		top: 25%;
+		right: 25%;
+		background: linear-gradient(to bottom, #0f0f0f, #2e2e2e 90%);
+		transition: 1s ease-in-out;
+		&:hover {
+			transition: 1s ease-in-out;
+			top: 22%;
+			right: 23%;
+		}
+    }
+
+    .circle3 {
+		width: 300px;
+		height: 300px;
+		bottom: 10%;
+		right: 33%;
+		background: linear-gradient(to bottom, #0f0f0f, #2e2e2e 130%);
+		transition: 1s ease-in-out;
+		&:hover {
+			transition: 1s ease-in-out;
+			right: 35%;
+			bottom: 8%;
+		}
+    }
+}

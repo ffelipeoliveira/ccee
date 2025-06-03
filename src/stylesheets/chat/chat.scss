@@ -1,0 +1,53 @@
+
+
+.left {
+	width: 30%;
+}
+
+.right {
+	width: 70%;
+	justify-content: center;
+}
+
+.attachFiles {
+	font-size: 23px;
+	align-items: center;
+}
+
+.settingsBar {
+	margin: 20px;
+	position: absolute;
+	bottom: 10px;
+	font-size: 1.5em;
+}
+
+.messageBox {
+	display: flex;
+    background: var(--glassy-black);
+	position: absolute;
+	bottom: 5px;
+	border: 1px solid var(--glassy-border);
+    padding: 5px;
+    border-radius: 30px;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+	input {
+		padding-left: 25px;
+		padding-right: 25px;
+		width: 400px;
+	}
+}
+
+.logout {
+	cursor: pointer;
+	&:hover {
+		color: var(--title-color);
+	}
+}
+
+.sendMessageButton {
+	margin-top: 0 !important;
+	width: 30px !important;
+	height: 30px !important;
+}

@@ -4,6 +4,7 @@
   --text-color: #b6b6b6;
   --title-color: #ffffff;
   --error: #ff5959;
+  --success: #66bb6a;
   --glassy-black: #1a1a1a80;
   --glassy-border: #cfcfcf2f;
   --gradient: linear-gradient(90deg,#67b8d1 0%, #3fb1fd 50%, #8e5bec 100%);
@@ -16,6 +17,17 @@ html, body {
   font-family: Lexend, Arial, Helvetica, sans-serif;
 }
 
+.checkbox-label {
+  margin-left: 5px;
+}
+
+.checkbox-wrapper {
+  margin-left: 5px;
+}
+
+a {
+  pointer-events: all !important;
+}
 a:hover {
   color: var(--title-color);
   transition: 0.3s;
@@ -48,16 +60,6 @@ a:hover {
   border: 1px var(--glassy-border) solid;
 }
 
-input {
-  transition: 0.3s;
-}
-input::-moz-placeholder {
-  color: var(--text-color);
-}
-input::placeholder {
-  color: var(--text-color);
-}
-
 input:focus {
   outline: none;
   color: var(--title-color);
@@ -67,33 +69,6 @@ input:focus::-moz-placeholder {
 }
 input:focus::placeholder {
   color: var(--title-color);
-}
-
-.formBox {
-  margin: 10px;
-  padding: 10px;
-  padding-left: 20px;
-  border-radius: 25px;
-}
-.formBox input {
-  width: 300px;
-}
-.formBox input:-webkit-autofill {
-  background-color: transparent;
-  background: none;
-  text-decoration: underline;
-}
-
-.eye-toggle {
-  position: absolute;
-  width: 20px;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--text-color);
 }
 
 .error {
@@ -113,10 +88,37 @@ input:focus::placeholder {
   margin-left: auto;
   align-items: center;
   transition: all 0.3s;
+  pointer-events: all;
 }
 .sendButton:hover {
   transition: all 0.3s;
   filter: contrast(2);
+  box-shadow: 0 0 30px var(rgba(255, 255, 255, 0.2862745098));
+}
+
+.flex-auto {
+  display: flex;
+  vertical-align: center;
+}
+
+.backButton {
+  margin-top: 1em;
+  width: 55px;
+  height: 55px;
+  border: 3px solid var(--title-color);
+  color: var(--title-color);
+  font-size: 55px;
+  border-radius: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  pointer-events: all;
+}
+.backButton:hover {
+  transition: all 0.3s;
+  background-color: var(--title-color);
+  color: var(--background-color);
   box-shadow: 0 0 30px var(rgba(255, 255, 255, 0.2862745098));
 }
 

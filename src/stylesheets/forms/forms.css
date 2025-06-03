@@ -1,0 +1,55 @@
+form {
+  max-width: 350px;
+}
+
+p {
+  align-self: center;
+}
+
+.formBox {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 25px;
+  pointer-events: all;
+}
+.formBox input {
+  width: 300px;
+  transition: 0.3s;
+}
+.formBox input::-moz-placeholder {
+  color: var(--text-color);
+}
+.formBox input::placeholder {
+  color: var(--text-color);
+}
+.formBox input:-webkit-autofill, .formBox input:-webkit-autofill:hover, .formBox input:-webkit-autofill:focus, .formBox input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: moccasin !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent !important;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+.formBox input input:-moz-autofill,
+.formBox input input:-moz-autofill:hover,
+.formBox input input:-moz-autofill:focus {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  text-fill-color: moccasin !important;
+}
+
+.eye-toggle {
+  position: absolute;
+  font-size: 1.5em;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--title-color);
+}/*# sourceMappingURL=forms.css.map */
