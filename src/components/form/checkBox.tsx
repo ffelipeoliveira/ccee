@@ -12,8 +12,7 @@ function CheckBox({
   required = false 
 }: CheckBoxProps) {
   return (
-    <div className="flex-auto">
-      <div className="checkbox-wrapper">
+    <div className="flex-auto checkbox-wrapper">
         <input 
           className="checkbox" 
           type="checkbox" 
@@ -21,8 +20,6 @@ function CheckBox({
           id={id} 
           required={required}
         />
-        <label htmlFor={id} /> 
-      </div>
       <p className="checkbox-label">{label}</p>
     </div>
   )

@@ -5,7 +5,9 @@ import SettingsBar from '../components/chat/settingsBar';
 import MessagePanel from '../components/chat/messagePanel';
 import MessageBox from '../components/chat/messageBox';
 
+
 import '../stylesheets/chat/chat.css';
+
 
 function Chat() {
   return (
@@ -17,6 +19,7 @@ function Chat() {
             <SettingsBar/>
         </div>
         <div className="right">
+            
             <MessagePanel/>
             <MessageBox/>
         </div>

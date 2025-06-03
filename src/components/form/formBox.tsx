@@ -1,7 +1,8 @@
 interface FormBoxProps {
-  value: string;
+  value?: string;
   required?: boolean;
   placeholder?: string;
+  className?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -9,10 +10,11 @@ function FormBox({
   value, 
   required = false, 
   placeholder = 'E-mail', 
+  className = "",
   onChange 
 }: FormBoxProps) {
   return (
-    <div className="formBox glass">
+    <div className={"formBox glass " + className}>
       <input
         type="text"
         value={value}

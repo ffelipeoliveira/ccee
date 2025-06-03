@@ -91,7 +91,7 @@ Projeto feito para a disciplina de Métodos Avançados de Programação
 ## Roadmap
 
 - [x] Base
-- [ ] Login e Cadastro
+- [x] Login e Cadastro
 - [ ] Enviar mensagens para todos
 - [ ] Chat integrado
     - [ ] Delegação de permissões

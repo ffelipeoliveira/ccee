@@ -1,11 +1,7 @@
-import Message from "./messagePanel/message"
-
-function messagePanel() {
+function MessagePanel() {
   return (
-	<div className="messagePanel">
-    <Message/>
-  </div>
+    <></>
   )
 }
 
-export default messagePanel
+export default MessagePanel
